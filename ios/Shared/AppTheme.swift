@@ -1,3 +1,4 @@
+import Darwin
 import SwiftUI
 
 public enum ButtonDecor: String, CaseIterable, Codable, Sendable {
@@ -201,10 +202,10 @@ public struct PalmShape: Shape {
         path.move(to: trunkBase)
         path.addQuadCurve(to: crown, control: CGPoint(x: rect.midX - rect.width * 0.08, y: rect.midY))
         for angle in stride(from: -150.0, through: 30.0, by: 36.0) {
-            let rad = angle * .pi / 180.0
+            let rad: Double = angle * Double.pi / 180.0
             let tip = CGPoint(
-                x: crown.x + cos(rad) * rect.width * 0.42,
-                y: crown.y + sin(rad) * rect.height * 0.32
+                x: crown.x + CGFloat(Darwin.cos(rad)) * rect.width * 0.42,
+                y: crown.y + CGFloat(Darwin.sin(rad)) * rect.height * 0.32
             )
             path.move(to: crown)
             path.addQuadCurve(to: tip, control: CGPoint(x: (crown.x + tip.x) / 2, y: min(crown.y, tip.y) - 8))
