@@ -1,0 +1,6 @@
+"NSLocalNetworkUsageDescription" = "OpenWakePC uses the local network to wake your computer via Wake-on-LAN and communicate with the desktop agent.";
+"NSLocationWhenInUseUsageDescription" = "OpenWakePC uses your home coordinates to wake your computer when you arrive home.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "OpenWakePC uses geofencing (~150 m around home) to wake your computer automatically when you arrive home. Coordinates never leave your iPhone.";
+"NSCameraUsageDescription" = "OpenWakePC uses the camera to scan pairing QR codes displayed by the desktop agent.";
+"NSFaceIDUsageDescription" = "OpenWakePC uses Face ID to optionally confirm destructive power actions such as shutdown or restart.";
+"NSPhotoLibraryAddUsageDescription" = "OpenWakePC saves screenshots of your computer screen to your Photo Library when you tap Save.";

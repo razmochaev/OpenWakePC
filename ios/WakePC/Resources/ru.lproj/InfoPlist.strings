@@ -1,0 +1,6 @@
+"NSLocalNetworkUsageDescription" = "OpenWakePC использует локальную сеть для включения компьютера по Wake-on-LAN и связи с десктопным агентом.";
+"NSLocationWhenInUseUsageDescription" = "OpenWakePC использует координаты дома, чтобы включать компьютер, когда вы подъезжаете домой.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "OpenWakePC использует геофенсинг (~150 м вокруг дома) для автоматического пробуждения ПК по приезду. Координаты хранятся только на iPhone.";
+"NSCameraUsageDescription" = "OpenWakePC использует камеру для сканирования QR-кода подключения из десктопного агента.";
+"NSFaceIDUsageDescription" = "OpenWakePC использует Face ID для опционального подтверждения выключения и перезагрузки компьютера.";
+"NSPhotoLibraryAddUsageDescription" = "OpenWakePC сохраняет снимки экрана компьютера в вашу медиатеку по нажатию кнопки «Сохранить».";

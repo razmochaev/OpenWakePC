@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0109AD7323454B3D55B234C2 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91662337C69E4E6DFE52795 /* Services.swift */; };
+		358F5262E30BA48F9DBAD8D7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 282A9281CA2656C093177049 /* Localizable.strings */; };
+		6E48F3D36787CADF25BF7375 /* AgentConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9897304BF173FF50A8EF862 /* AgentConfig.swift */; };
+		B32975C4E09A074FB1EFF19A /* MacSystemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CD805FA2F0A833B41070FF /* MacSystemController.swift */; };
+		B703B4B70E453DD0E9B9369B /* RelayClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D211FAE87A56786969F042CC /* RelayClient.swift */; };
+		D382EE73B960E8033B64433A /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A848A4DD59472DC7CED4238C /* AppIcon.icns */; };
+		DB8033E16716781D6CF6FBFC /* WakePCAgentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D36D7466D9E71A4A62E65 /* WakePCAgentApp.swift */; };
+		E79770E1C7CAF512151216C6 /* RelayCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B511076E8EA7045A9E85DB /* RelayCrypto.swift */; };
+		F731F4EA20A588270D92E8D2 /* HTTPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561DA1EF60D2AB6BA90A7A8E /* HTTPServer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		46B511076E8EA7045A9E85DB /* RelayCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayCrypto.swift; sourceTree = "<group>"; };
+		561DA1EF60D2AB6BA90A7A8E /* HTTPServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServer.swift; sourceTree = "<group>"; };
+		84E90C9FD7C58672B13A1795 /* WakePCAgent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakePCAgent.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A848A4DD59472DC7CED4238C /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
+		B9897304BF173FF50A8EF862 /* AgentConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentConfig.swift; sourceTree = "<group>"; };
+		BF3D36D7466D9E71A4A62E65 /* WakePCAgentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakePCAgentApp.swift; sourceTree = "<group>"; };
+		D211FAE87A56786969F042CC /* RelayClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayClient.swift; sourceTree = "<group>"; };
+		D37890D599B898CBB8AE59F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D38DDB10BAB62E228DC05794 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F3CD805FA2F0A833B41070FF /* MacSystemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacSystemController.swift; sourceTree = "<group>"; };
+		F91662337C69E4E6DFE52795 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0A0D1D92D5B34D6853D74C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84E90C9FD7C58672B13A1795 /* WakePCAgent.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		183DD9625C16B311D12AABFB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BF3D36D7466D9E71A4A62E65 /* WakePCAgentApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		47004688D4493728A008818A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A848A4DD59472DC7CED4238C /* AppIcon.icns */,
+				282A9281CA2656C093177049 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		812395E6F20CB8A8B07A2FE5 = {
+			isa = PBXGroup;
+			children = (
+				183DD9625C16B311D12AABFB /* App */,
+				D980A72B8D2B3AB2BCCAFF1F /* Core */,
+				47004688D4493728A008818A /* Resources */,
+				0A0D1D92D5B34D6853D74C8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D980A72B8D2B3AB2BCCAFF1F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B9897304BF173FF50A8EF862 /* AgentConfig.swift */,
+				561DA1EF60D2AB6BA90A7A8E /* HTTPServer.swift */,
+				F3CD805FA2F0A833B41070FF /* MacSystemController.swift */,
+				D211FAE87A56786969F042CC /* RelayClient.swift */,
+				46B511076E8EA7045A9E85DB /* RelayCrypto.swift */,
+				F91662337C69E4E6DFE52795 /* Services.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9002D6846FF82F47DBA5A004 /* WakePCAgent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38024A213685F412477144CC /* Build configuration list for PBXNativeTarget "WakePCAgent" */;
+			buildPhases = (
+				9710BE1D1E888F20A862E2E1 /* Sources */,
+				86194B4862E1AD2770565F13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WakePCAgent;
+			packageProductDependencies = (
+			);
+			productName = WakePCAgent;
+			productReference = 84E90C9FD7C58672B13A1795 /* WakePCAgent.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C973F25FA8464D36FE04D42 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					9002D6846FF82F47DBA5A004 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5BCCCD87250F38E8E31DBD37 /* Build configuration list for PBXProject "WakePCAgent" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				ru,
+			);
+			mainGroup = 812395E6F20CB8A8B07A2FE5;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0A0D1D92D5B34D6853D74C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9002D6846FF82F47DBA5A004 /* WakePCAgent */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86194B4862E1AD2770565F13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D382EE73B960E8033B64433A /* AppIcon.icns in Resources */,
+				358F5262E30BA48F9DBAD8D7 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9710BE1D1E888F20A862E2E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E48F3D36787CADF25BF7375 /* AgentConfig.swift in Sources */,
+				F731F4EA20A588270D92E8D2 /* HTTPServer.swift in Sources */,
+				B32975C4E09A074FB1EFF19A /* MacSystemController.swift in Sources */,
+				B703B4B70E453DD0E9B9369B /* RelayClient.swift in Sources */,
+				E79770E1C7CAF512151216C6 /* RelayCrypto.swift in Sources */,
+				0109AD7323454B3D55B234C2 /* Services.swift in Sources */,
+				DB8033E16716781D6CF6FBFC /* WakePCAgentApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		282A9281CA2656C093177049 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D37890D599B898CBB8AE59F4 /* en */,
+				D38DDB10BAB62E228DC05794 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0FB90074A4D71C05886DCA58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openwakepc.agent.mac;
+				PRODUCT_NAME = "OpenWakePC Agent";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2C64E31737D632491EC33DFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openwakepc.agent.mac;
+				PRODUCT_NAME = "OpenWakePC Agent";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AB05E85A0935190448403706 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.10;
+			};
+			name = Debug;
+		};
+		D154C742BEC53B0C5B04C9CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.10;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38024A213685F412477144CC /* Build configuration list for PBXNativeTarget "WakePCAgent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FB90074A4D71C05886DCA58 /* Debug */,
+				2C64E31737D632491EC33DFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5BCCCD87250F38E8E31DBD37 /* Build configuration list for PBXProject "WakePCAgent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB05E85A0935190448403706 /* Debug */,
+				D154C742BEC53B0C5B04C9CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C973F25FA8464D36FE04D42 /* Project object */;
+}

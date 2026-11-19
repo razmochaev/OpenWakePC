@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "open-wakepc"
+version = "1.0.0"
+description = "OpenWakePC by razmochaev — Self-hosted E2EE Relay, Cross-platform Desktop Agent, and Native iOS App"
+authors = [{ name = "razmochaev" }]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "aiohttp>=3.9.0",
+    "cryptography>=42.0.0",
+]
+
+[project.optional-dependencies]
+agent = [
+    "psutil>=5.9.0",
+    "Pillow>=10.0.0",
+    "mss>=9.0.0",
+    "pynput>=1.7.6",
+    "zeroconf>=0.131.0",
+    "qrcode>=7.4.2",
+]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[project.scripts]
+wakepc-relay = "relay.__main__:main"
+wakepc-agent = "agent.__main__:main"
+
+[project.urls]
+Homepage = "https://razmochaev.com"
+Repository = "https://github.com/razmochaev/OpenWakePC"
+Releases = "https://github.com/razmochaev/OpenWakePC/releases"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["common*", "relay*", "agent*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests", "relay/tests", "agent/tests"]
+pythonpath = ["."]

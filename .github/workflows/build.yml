@@ -1,0 +1,89 @@
+name: Build & Release OpenWakePC (razmochaev)
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  python-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev]"
+      - run: pytest -v
+
+  windows-agent:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+      - name: Publish Windows Agent (win-x64 single-file)
+        run: |
+          dotnet publish windows/WakePCAgent/WakePCAgent.csproj `
+            -c Release -r win-x64 --self-contained true `
+            -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true `
+            -o artifacts/win-x64
+          Compress-Archive -Path artifacts/win-x64/* -DestinationPath artifacts/OpenWakePC-Agent-Windows-x64.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OpenWakePC-Agent-Windows-x64
+          path: artifacts/OpenWakePC-Agent-Windows-x64.zip
+
+  macos-and-ios:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Build macOS Agent & Create DMG
+        run: |
+          cd macos/WakePCAgent
+          xcodegen generate
+          xcodebuild -project WakePCAgent.xcodeproj -scheme WakePCAgent -configuration Release -arch arm64 -derivedDataPath /tmp/build/mac CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build
+          mkdir -p /tmp/build/dmg-stage /tmp/build/out
+          ditto "/tmp/build/mac/Build/Products/Release/OpenWakePC Agent.app" "/tmp/build/dmg-stage/OpenWakePC Agent.app"
+          codesign --force --deep --sign - "/tmp/build/dmg-stage/OpenWakePC Agent.app"
+          ln -s /Applications /tmp/build/dmg-stage/Applications
+          hdiutil create -volname "OpenWakePC Agent" -srcfolder /tmp/build/dmg-stage -ov -format UDZO /tmp/build/out/OpenWakePC-Agent-macOS-arm64.dmg
+      - name: Build iOS App & Package Unsigned IPA
+        run: |
+          cd ios
+          xcodegen generate
+          xcodebuild -project WakePC.xcodeproj -scheme WakePC -configuration Release -destination 'generic/platform=iOS' -derivedDataPath /tmp/build/ios CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build
+          mkdir -p /tmp/build/ipa-stage/Payload
+          ditto "/tmp/build/ios/Build/Products/Release-iphoneos/OpenWakePC.app" "/tmp/build/ipa-stage/Payload/OpenWakePC.app"
+          (cd /tmp/build/ipa-stage && zip -qry /tmp/build/out/OpenWakePC-iOS.ipa Payload)
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OpenWakePC-Apple-Releases
+          path: /tmp/build/out/*
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [python-tests, windows-agent, macos-and-ios]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist-artifacts
+          merge-multiple: true
+      - name: Attach Release Assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" dist-artifacts/* --clobber
+          else
+            gh release create "$TAG" dist-artifacts/* --title "OpenWakePC $TAG" --generate-notes
+          fi

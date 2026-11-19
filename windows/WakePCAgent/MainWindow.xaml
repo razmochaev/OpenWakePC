@@ -1,0 +1,89 @@
+<Window x:Class="WakePCAgent.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OpenWakePC Agent"
+        Width="740" Height="560"
+        Background="#11131A"
+        Foreground="#F1F5F9"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="18">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Left column: QR Pairing & Status -->
+        <Border Grid.Column="0" Background="#1B1F2B" CornerRadius="16" Padding="16" Margin="0,0,14,0">
+            <StackPanel>
+                <TextBlock Text="OpenWakePC Agent" FontSize="18" FontWeight="Bold" />
+                <TextBlock x:Name="StatusBadge" Text="Starting..." Foreground="#4ADE80" Margin="0,4,0,14" />
+
+                <Border Background="White" CornerRadius="12" Padding="10" HorizontalAlignment="Center">
+                    <Image x:Name="QrImage" Width="196" Height="196" Stretch="Uniform" />
+                </Border>
+                <TextBlock Text="Scan with OpenWakePC iOS App" HorizontalAlignment="Center" Foreground="#94A3B8" FontSize="12" Margin="0,8,0,12" />
+
+                <TextBlock x:Name="NetworkSummary" FontSize="12" Foreground="#CBD5E1" TextWrapping="Wrap" Margin="0,0,0,12" />
+                <TextBlock x:Name="RelayStatusText" FontSize="12" Foreground="#38BDF8" Margin="0,0,0,14" />
+
+                <Button Content="Fix Firewall (TCP 8765 / UDP 9)" Click="OnFixFirewall" Padding="8,6" Margin="0,0,0,8" />
+                <Button Content="Enable Launch at Login" Click="OnEnableAutostart" Padding="8,6" />
+                <TextBlock FontSize="11" Foreground="#64748B" Margin="0,12,0,0" TextWrapping="Wrap">
+                    <Run Text="OpenWakePC • © 2026 razmochaev" />
+                    <LineBreak />
+                    <Hyperlink NavigateUri="https://razmochaev.com" RequestNavigate="OnOpenLink" Foreground="#38BDF8">razmochaev.com</Hyperlink>
+                    <Run Text=" • " />
+                    <Hyperlink NavigateUri="https://github.com/razmochaev/OpenWakePC" RequestNavigate="OnOpenLink" Foreground="#38BDF8">GitHub</Hyperlink>
+                </TextBlock>
+            </StackPanel>
+        </Border>
+
+        <!-- Right column: Settings & Custom Commands -->
+        <TabControl Grid.Column="1" Background="#1B1F2B" Foreground="#F1F5F9">
+            <TabItem Header="Server &amp; E2EE Relay">
+                <StackPanel Margin="14">
+                    <TextBlock Text="HTTP API Port (default 8765)" Foreground="#94A3B8" FontSize="12" />
+                    <TextBox x:Name="PortBox" Margin="0,4,0,12" Padding="6" />
+
+                    <TextBlock Text="Agent Bearer Token" Foreground="#94A3B8" FontSize="12" />
+                    <DockPanel Margin="0,4,0,12">
+                        <Button DockPanel.Dock="Right" Content="Regenerate" Click="OnRegenerateToken" Padding="10,4" Margin="8,0,0,0" />
+                        <TextBox x:Name="TokenBox" Padding="6" />
+                    </DockPanel>
+
+                    <TextBlock Text="Self-Hosted E2EE Relay URL (optional)" Foreground="#94A3B8" FontSize="12" />
+                    <TextBox x:Name="RelayUrlBox" Margin="0,4,0,12" Padding="6" />
+
+                    <TextBlock Text="Optional relay.json Discovery URL" Foreground="#94A3B8" FontSize="12" />
+                    <TextBox x:Name="RelayDiscoveryBox" Margin="0,4,0,16" Padding="6" />
+
+                    <Button Content="Save &amp; Restart Services" Click="OnSaveSettings" Padding="12,8" HorizontalAlignment="Left" />
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Custom Commands">
+                <DockPanel Margin="14">
+                    <StackPanel DockPanel.Dock="Bottom" Margin="0,10,0,0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="90" />
+                                <ColumnDefinition Width="1.5*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBox x:Name="CmdNameBox" Grid.Column="0" Margin="0,0,6,0" Padding="6" ToolTip="Button Name" />
+                            <ComboBox x:Name="CmdKindBox" Grid.Column="1" Margin="0,0,6,0" SelectedIndex="0">
+                                <ComboBoxItem Content="App" />
+                                <ComboBoxItem Content="Url" />
+                                <ComboBoxItem Content="Shell" />
+                            </ComboBox>
+                            <TextBox x:Name="CmdTargetBox" Grid.Column="2" Margin="0,0,6,0" Padding="6" ToolTip="Path, URL or command" />
+                            <Button Grid.Column="3" Content="Add" Click="OnAddCommand" Padding="12,6" />
+                        </Grid>
+                    </StackPanel>
+                    <ListBox x:Name="CommandsList" Background="#11131A" Foreground="#F1F5F9" />
+                </DockPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

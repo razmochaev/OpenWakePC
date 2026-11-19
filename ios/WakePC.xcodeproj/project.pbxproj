@@ -1,0 +1,674 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02D4AED0B86B1E849D9F8166 /* WatchSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CAA918B157BCDC4016E46F /* WatchSyncService.swift */; };
+		04A08F8DD30185FD1F4B20D0 /* WakePCControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA01FA7FDC45241A28D31E2C /* WakePCControls.swift */; };
+		078E974B933026BECC408E1C /* RelayClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DA4A4D5EA224165DDFC78B /* RelayClient.swift */; };
+		0C97D7EC17AF7FD90CF124FD /* WakePCIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84655231EF7E7E6A53ACDC36 /* WakePCIntents.swift */; };
+		0DCB8F8845F8AAC8CC130DFD /* DeviceServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7613C6F49881A46F44B9210 /* DeviceServices.swift */; };
+		228731D5173837388D4E162D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7FDB97139E2FF7E14F1AADA /* InfoPlist.strings */; };
+		26B87DAEE13BC63A4732AF62 /* WakePCLiveActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2DB73F6C15B797DC20531C /* WakePCLiveActivities.swift */; };
+		28C962D8878DEFB930C0CA08 /* ControlComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0617D49ED97360405B69DD4C /* ControlComponents.swift */; };
+		2EB45683B32E77851DE2CE9D /* WakePCWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C242CEBB8103968A85288560 /* WakePCWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		30CD008954D2938E9BEF6424 /* SharedConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDB372A559A1D59DB2AE7D /* SharedConfig.swift */; };
+		35B1C8E2F133A34FF7DB0CCC /* PushService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA78E78F7DEC019C0C89ACC /* PushService.swift */; };
+		378F57A8A5EF73A82A8D8AA9 /* QRScannerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FFEB833C7A7D58893391D9 /* QRScannerSheet.swift */; };
+		3CB0EA1008A9C761F73E658D /* RelayCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95856845E0442983097A1649 /* RelayCrypto.swift */; };
+		4426812288F585E8F47128F4 /* RelayCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95856845E0442983097A1649 /* RelayCrypto.swift */; };
+		5FE0393028F4011EC9BACDBB /* WoLSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6514C1F357542D3EF0EE28 /* WoLSender.swift */; };
+		5FE244FBCFB2A319A41DAB75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A154294AAEFB8BD29225FC9 /* ContentView.swift */; };
+		62CCD542EBD4678965E5DDA7 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A2F2464DE51A8EAEE1C727 /* AppTheme.swift */; };
+		651AA2A6DF7685F36C9D6231 /* WidgetIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D49597BAC2B905CA112353B /* WidgetIntents.swift */; };
+		65C8B3F308D15E73327EB9C2 /* KeychainTokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B327A661B3568E2AE06C8823 /* KeychainTokenStore.swift */; };
+		67CE2DD6616285E40D940113 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED88DA9454912D25AF930D83 /* Localizable.strings */; };
+		68447D4ECCA5730BB662D7C8 /* WakePCWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B72785C44508ECD9878DC /* WakePCWidget.swift */; };
+		754E5C10AC9EF599582481B2 /* ToolsSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0AF10218ADD91D46AA900 /* ToolsSheets.swift */; };
+		76084E2DFD97361A47F84EE6 /* TouchpadSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DDCC3274956F1C5847329D /* TouchpadSheet.swift */; };
+		7C9D271695BAA3EBCDF71405 /* WakePCWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A5AA57EE6643AF264BE72 /* WakePCWidgetBundle.swift */; };
+		7CA8C717BA61D856B3EFB979 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA4FF4FA588D89D40FF1D9E /* L10n.swift */; };
+		83857D78B5840DB6D1DF6C1E /* OnboardingAndProfilesSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8DFDDA1C8D58BEB59303CA /* OnboardingAndProfilesSheets.swift */; };
+		885AF309622C253486FE5D0D /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A2F2464DE51A8EAEE1C727 /* AppTheme.swift */; };
+		908D4C5F5B28F5688DB6503E /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA4FF4FA588D89D40FF1D9E /* L10n.swift */; };
+		95CA5F3AAD6CF3235CDBA3B3 /* SharedConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDB372A559A1D59DB2AE7D /* SharedConfig.swift */; };
+		98123628A98F6DA873D2F4AF /* SendToPCSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089224BA0D8766F102153479 /* SendToPCSheet.swift */; };
+		99344389B865F910BD3042B6 /* RelayClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DA4A4D5EA224165DDFC78B /* RelayClient.swift */; };
+		9A7BE5D7982E53BF03D8971F /* PCDiscoveryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DF0C25EF6B1C160D10E77 /* PCDiscoveryService.swift */; };
+		A736D8F253E598AE0000846B /* ActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1323F5C3D7B8F7E1A5F0F8F9 /* ActivityAttributes.swift */; };
+		A7809AD30B019D0D3C73FA3B /* GeofenceWakeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7EA5569AEE364DFF6B09D8 /* GeofenceWakeService.swift */; };
+		A7E73B33B693D502D13C60B1 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713E77279D4E7929A7C12C2 /* Models.swift */; };
+		A9F04DDBB9876D857DADE1D0 /* KeychainTokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B327A661B3568E2AE06C8823 /* KeychainTokenStore.swift */; };
+		AB6DF07721248F72B0B0DFB2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5944D11E9295C79D3F37A8 /* NetworkService.swift */; };
+		B8982D913A4B0F8BD04A4B01 /* SharedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6B664EAABB8EBF4458239 /* SharedStorage.swift */; };
+		BA5672000669FA787A29376D /* TouchpadEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D34A21E235B74637687F50 /* TouchpadEngine.swift */; };
+		C25BA7335A689C9FB9A6A8CE /* WakePCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FCA8CE338D12542114F5C5 /* WakePCApp.swift */; };
+		CA4029EDAAC0BF788A4BD0D5 /* ActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1323F5C3D7B8F7E1A5F0F8F9 /* ActivityAttributes.swift */; };
+		D10FA8E23CAF65C108C6D602 /* SharedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6B664EAABB8EBF4458239 /* SharedStorage.swift */; };
+		DA39971D72C67B9565D8402B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09C93FDB38F58C4E8A709245 /* Assets.xcassets */; };
+		E6F5DB9A2EA07D8B20C763D8 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713E77279D4E7929A7C12C2 /* Models.swift */; };
+		E920AB04477C5D80B49F94FD /* ThemeAndSettingsSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05716B389F58156788A10A55 /* ThemeAndSettingsSheets.swift */; };
+		EB3F69B39A7604C835A7ED12 /* WoLSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6514C1F357542D3EF0EE28 /* WoLSender.swift */; };
+		F91EB45208274BFA44D9DD23 /* WidgetWoLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AD26D74474ACC2DEDCE8BA /* WidgetWoLService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8074DB75E4FB8D49197F93CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A46B305C4226825F994B621 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1BF6A1078EA7CDDF6743121;
+			remoteInfo = WakePCWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D948673A738361BA8D286CA3 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2EB45683B32E77851DE2CE9D /* WakePCWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		05716B389F58156788A10A55 /* ThemeAndSettingsSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeAndSettingsSheets.swift; sourceTree = "<group>"; };
+		0617D49ED97360405B69DD4C /* ControlComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlComponents.swift; sourceTree = "<group>"; };
+		0761B99327C3C6773471702B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089224BA0D8766F102153479 /* SendToPCSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendToPCSheet.swift; sourceTree = "<group>"; };
+		09C93FDB38F58C4E8A709245 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1323F5C3D7B8F7E1A5F0F8F9 /* ActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityAttributes.swift; sourceTree = "<group>"; };
+		1A154294AAEFB8BD29225FC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1A7EA5569AEE364DFF6B09D8 /* GeofenceWakeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceWakeService.swift; sourceTree = "<group>"; };
+		32A2F2464DE51A8EAEE1C727 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		32DA4A4D5EA224165DDFC78B /* RelayClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayClient.swift; sourceTree = "<group>"; };
+		32FF86C08213E697D23347D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		36B6B664EAABB8EBF4458239 /* SharedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStorage.swift; sourceTree = "<group>"; };
+		3CB4C70B152D47F68F205FF1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D49597BAC2B905CA112353B /* WidgetIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetIntents.swift; sourceTree = "<group>"; };
+		5569159F322F0F6B275F8524 /* WakePC.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = WakePC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5713E77279D4E7929A7C12C2 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		60FFEB833C7A7D58893391D9 /* QRScannerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerSheet.swift; sourceTree = "<group>"; };
+		79D34A21E235B74637687F50 /* TouchpadEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchpadEngine.swift; sourceTree = "<group>"; };
+		79FCA8CE338D12542114F5C5 /* WakePCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakePCApp.swift; sourceTree = "<group>"; };
+		84655231EF7E7E6A53ACDC36 /* WakePCIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakePCIntents.swift; sourceTree = "<group>"; };
+		8CF0AF10218ADD91D46AA900 /* ToolsSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsSheets.swift; sourceTree = "<group>"; };
+		95856845E0442983097A1649 /* RelayCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayCrypto.swift; sourceTree = "<group>"; };
+		99CAA918B157BCDC4016E46F /* WatchSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSyncService.swift; sourceTree = "<group>"; };
+		9ADDB372A559A1D59DB2AE7D /* SharedConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedConfig.swift; sourceTree = "<group>"; };
+		9D6514C1F357542D3EF0EE28 /* WoLSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoLSender.swift; sourceTree = "<group>"; };
+		A07A5AA57EE6643AF264BE72 /* WakePCWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakePCWidgetBundle.swift; sourceTree = "<group>"; };
+		A0AD26D74474ACC2DEDCE8BA /* WidgetWoLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetWoLService.swift; sourceTree = "<group>"; };
+		A52B72785C44508ECD9878DC /* WakePCWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakePCWidget.swift; sourceTree = "<group>"; };
+		AA01FA7FDC45241A28D31E2C /* WakePCControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakePCControls.swift; sourceTree = "<group>"; };
+		AC8DFDDA1C8D58BEB59303CA /* OnboardingAndProfilesSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAndProfilesSheets.swift; sourceTree = "<group>"; };
+		AF9DF0C25EF6B1C160D10E77 /* PCDiscoveryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCDiscoveryService.swift; sourceTree = "<group>"; };
+		B2D9ED98ADE17F7783A7B260 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B327A661B3568E2AE06C8823 /* KeychainTokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTokenStore.swift; sourceTree = "<group>"; };
+		B7613C6F49881A46F44B9210 /* DeviceServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceServices.swift; sourceTree = "<group>"; };
+		BD5944D11E9295C79D3F37A8 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		BFA78E78F7DEC019C0C89ACC /* PushService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushService.swift; sourceTree = "<group>"; };
+		C242CEBB8103968A85288560 /* WakePCWidgetExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = WakePCWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD2DB73F6C15B797DC20531C /* WakePCLiveActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakePCLiveActivities.swift; sourceTree = "<group>"; };
+		E4DDCC3274956F1C5847329D /* TouchpadSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchpadSheet.swift; sourceTree = "<group>"; };
+		FDA4FF4FA588D89D40FF1D9E /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		013209483C989639E6E6509A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A154294AAEFB8BD29225FC9 /* ContentView.swift */,
+				0617D49ED97360405B69DD4C /* ControlComponents.swift */,
+				AC8DFDDA1C8D58BEB59303CA /* OnboardingAndProfilesSheets.swift */,
+				60FFEB833C7A7D58893391D9 /* QRScannerSheet.swift */,
+				089224BA0D8766F102153479 /* SendToPCSheet.swift */,
+				05716B389F58156788A10A55 /* ThemeAndSettingsSheets.swift */,
+				8CF0AF10218ADD91D46AA900 /* ToolsSheets.swift */,
+				E4DDCC3274956F1C5847329D /* TouchpadSheet.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		21C0CD619C15CB7D084DCBCB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				79FCA8CE338D12542114F5C5 /* WakePCApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		28D46880D2A6D8F850299B8A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B7613C6F49881A46F44B9210 /* DeviceServices.swift */,
+				1A7EA5569AEE364DFF6B09D8 /* GeofenceWakeService.swift */,
+				BD5944D11E9295C79D3F37A8 /* NetworkService.swift */,
+				AF9DF0C25EF6B1C160D10E77 /* PCDiscoveryService.swift */,
+				BFA78E78F7DEC019C0C89ACC /* PushService.swift */,
+				79D34A21E235B74637687F50 /* TouchpadEngine.swift */,
+				99CAA918B157BCDC4016E46F /* WatchSyncService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3518CA7C1495F8B5DC09C19E /* WakePCWidgetExtension */ = {
+			isa = PBXGroup;
+			children = (
+				AA01FA7FDC45241A28D31E2C /* WakePCControls.swift */,
+				CD2DB73F6C15B797DC20531C /* WakePCLiveActivities.swift */,
+				A52B72785C44508ECD9878DC /* WakePCWidget.swift */,
+				A07A5AA57EE6643AF264BE72 /* WakePCWidgetBundle.swift */,
+				4D49597BAC2B905CA112353B /* WidgetIntents.swift */,
+				A0AD26D74474ACC2DEDCE8BA /* WidgetWoLService.swift */,
+			);
+			path = WakePCWidgetExtension;
+			sourceTree = "<group>";
+		};
+		53A0DFCC5A11B1E2F53AC32D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5569159F322F0F6B275F8524 /* WakePC.app */,
+				C242CEBB8103968A85288560 /* WakePCWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91528ED9F7D76A31117B1987 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				09C93FDB38F58C4E8A709245 /* Assets.xcassets */,
+				D7FDB97139E2FF7E14F1AADA /* InfoPlist.strings */,
+				ED88DA9454912D25AF930D83 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A36DC6FFC4F521F4D8884DB9 = {
+			isa = PBXGroup;
+			children = (
+				C571822590B8463AB60714FC /* Shared */,
+				F39E5080C6955D67C725A83A /* WakePC */,
+				3518CA7C1495F8B5DC09C19E /* WakePCWidgetExtension */,
+				53A0DFCC5A11B1E2F53AC32D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA7F15B927328A071A7D1342 /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				84655231EF7E7E6A53ACDC36 /* WakePCIntents.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
+		C571822590B8463AB60714FC /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1323F5C3D7B8F7E1A5F0F8F9 /* ActivityAttributes.swift */,
+				32A2F2464DE51A8EAEE1C727 /* AppTheme.swift */,
+				B327A661B3568E2AE06C8823 /* KeychainTokenStore.swift */,
+				FDA4FF4FA588D89D40FF1D9E /* L10n.swift */,
+				5713E77279D4E7929A7C12C2 /* Models.swift */,
+				32DA4A4D5EA224165DDFC78B /* RelayClient.swift */,
+				95856845E0442983097A1649 /* RelayCrypto.swift */,
+				9ADDB372A559A1D59DB2AE7D /* SharedConfig.swift */,
+				36B6B664EAABB8EBF4458239 /* SharedStorage.swift */,
+				9D6514C1F357542D3EF0EE28 /* WoLSender.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F39E5080C6955D67C725A83A /* WakePC */ = {
+			isa = PBXGroup;
+			children = (
+				21C0CD619C15CB7D084DCBCB /* App */,
+				AA7F15B927328A071A7D1342 /* Intents */,
+				91528ED9F7D76A31117B1987 /* Resources */,
+				28D46880D2A6D8F850299B8A /* Services */,
+				013209483C989639E6E6509A /* Views */,
+			);
+			path = WakePC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A42EB789108DFFF9E817EC7 /* WakePC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EB245CC4DA66F648E410771 /* Build configuration list for PBXNativeTarget "WakePC" */;
+			buildPhases = (
+				5B3ED78CD5AA0FBEFA519221 /* Sources */,
+				658F6674841B32932EC090D9 /* Resources */,
+				D948673A738361BA8D286CA3 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27AE6826261E78A1B0121AA1 /* PBXTargetDependency */,
+			);
+			name = WakePC;
+			packageProductDependencies = (
+			);
+			productName = WakePC;
+			productReference = 5569159F322F0F6B275F8524 /* WakePC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C1BF6A1078EA7CDDF6743121 /* WakePCWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD4A74084EADE58BB40E61E6 /* Build configuration list for PBXNativeTarget "WakePCWidgetExtension" */;
+			buildPhases = (
+				619B40097BB140C1F7D93983 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WakePCWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = WakePCWidgetExtension;
+			productReference = C242CEBB8103968A85288560 /* WakePCWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A46B305C4226825F994B621 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					0A42EB789108DFFF9E817EC7 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					C1BF6A1078EA7CDDF6743121 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EF2DAB8C3432DC8DA1193B72 /* Build configuration list for PBXProject "WakePC" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				ru,
+			);
+			mainGroup = A36DC6FFC4F521F4D8884DB9;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 53A0DFCC5A11B1E2F53AC32D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A42EB789108DFFF9E817EC7 /* WakePC */,
+				C1BF6A1078EA7CDDF6743121 /* WakePCWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		658F6674841B32932EC090D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA39971D72C67B9565D8402B /* Assets.xcassets in Resources */,
+				228731D5173837388D4E162D /* InfoPlist.strings in Resources */,
+				67CE2DD6616285E40D940113 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B3ED78CD5AA0FBEFA519221 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A736D8F253E598AE0000846B /* ActivityAttributes.swift in Sources */,
+				62CCD542EBD4678965E5DDA7 /* AppTheme.swift in Sources */,
+				5FE244FBCFB2A319A41DAB75 /* ContentView.swift in Sources */,
+				28C962D8878DEFB930C0CA08 /* ControlComponents.swift in Sources */,
+				0DCB8F8845F8AAC8CC130DFD /* DeviceServices.swift in Sources */,
+				A7809AD30B019D0D3C73FA3B /* GeofenceWakeService.swift in Sources */,
+				65C8B3F308D15E73327EB9C2 /* KeychainTokenStore.swift in Sources */,
+				908D4C5F5B28F5688DB6503E /* L10n.swift in Sources */,
+				E6F5DB9A2EA07D8B20C763D8 /* Models.swift in Sources */,
+				AB6DF07721248F72B0B0DFB2 /* NetworkService.swift in Sources */,
+				83857D78B5840DB6D1DF6C1E /* OnboardingAndProfilesSheets.swift in Sources */,
+				9A7BE5D7982E53BF03D8971F /* PCDiscoveryService.swift in Sources */,
+				35B1C8E2F133A34FF7DB0CCC /* PushService.swift in Sources */,
+				378F57A8A5EF73A82A8D8AA9 /* QRScannerSheet.swift in Sources */,
+				078E974B933026BECC408E1C /* RelayClient.swift in Sources */,
+				4426812288F585E8F47128F4 /* RelayCrypto.swift in Sources */,
+				98123628A98F6DA873D2F4AF /* SendToPCSheet.swift in Sources */,
+				95CA5F3AAD6CF3235CDBA3B3 /* SharedConfig.swift in Sources */,
+				B8982D913A4B0F8BD04A4B01 /* SharedStorage.swift in Sources */,
+				E920AB04477C5D80B49F94FD /* ThemeAndSettingsSheets.swift in Sources */,
+				754E5C10AC9EF599582481B2 /* ToolsSheets.swift in Sources */,
+				BA5672000669FA787A29376D /* TouchpadEngine.swift in Sources */,
+				76084E2DFD97361A47F84EE6 /* TouchpadSheet.swift in Sources */,
+				C25BA7335A689C9FB9A6A8CE /* WakePCApp.swift in Sources */,
+				0C97D7EC17AF7FD90CF124FD /* WakePCIntents.swift in Sources */,
+				02D4AED0B86B1E849D9F8166 /* WatchSyncService.swift in Sources */,
+				EB3F69B39A7604C835A7ED12 /* WoLSender.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		619B40097BB140C1F7D93983 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA4029EDAAC0BF788A4BD0D5 /* ActivityAttributes.swift in Sources */,
+				885AF309622C253486FE5D0D /* AppTheme.swift in Sources */,
+				A9F04DDBB9876D857DADE1D0 /* KeychainTokenStore.swift in Sources */,
+				7CA8C717BA61D856B3EFB979 /* L10n.swift in Sources */,
+				A7E73B33B693D502D13C60B1 /* Models.swift in Sources */,
+				99344389B865F910BD3042B6 /* RelayClient.swift in Sources */,
+				3CB0EA1008A9C761F73E658D /* RelayCrypto.swift in Sources */,
+				30CD008954D2938E9BEF6424 /* SharedConfig.swift in Sources */,
+				D10FA8E23CAF65C108C6D602 /* SharedStorage.swift in Sources */,
+				04A08F8DD30185FD1F4B20D0 /* WakePCControls.swift in Sources */,
+				26B87DAEE13BC63A4732AF62 /* WakePCLiveActivities.swift in Sources */,
+				68447D4ECCA5730BB662D7C8 /* WakePCWidget.swift in Sources */,
+				7C9D271695BAA3EBCDF71405 /* WakePCWidgetBundle.swift in Sources */,
+				651AA2A6DF7685F36C9D6231 /* WidgetIntents.swift in Sources */,
+				F91EB45208274BFA44D9DD23 /* WidgetWoLService.swift in Sources */,
+				5FE0393028F4011EC9BACDBB /* WoLSender.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27AE6826261E78A1B0121AA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1BF6A1078EA7CDDF6743121 /* WakePCWidgetExtension */;
+			targetProxy = 8074DB75E4FB8D49197F93CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D7FDB97139E2FF7E14F1AADA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2D9ED98ADE17F7783A7B260 /* en */,
+				0761B99327C3C6773471702B /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ED88DA9454912D25AF930D83 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32FF86C08213E697D23347D5 /* en */,
+				3CB4C70B152D47F68F205FF1 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1B0C94F2C73512EED11B5AB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APP_GROUP_ID = group.org.openwakepc.shared;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				KEYCHAIN_GROUP_ID = "$(AppIdentifierPrefix)org.openwakepc.shared";
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		51FB80A81D28D9873E25FF23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WakePC/Resources/WakePC.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WakePC/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.openwakepc.app;
+				PRODUCT_NAME = OpenWakePC;
+				SDKROOT = iphoneos;
+				SUPPORTS_LIVE_ACTIVITIES = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5AB827D26814D246D1B29D6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = WakePCWidgetExtension/Resources/WakePCWidgetExtension.entitlements;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WakePCWidgetExtension/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.openwakepc.app.WakePCWidget;
+				PRODUCT_NAME = WakePCWidgetExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5D9A0098777F90C4914812CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APP_GROUP_ID = group.org.openwakepc.shared;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				KEYCHAIN_GROUP_ID = "$(AppIdentifierPrefix)org.openwakepc.shared";
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7DC83E762CFE8859FE23ADAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WakePC/Resources/WakePC.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WakePC/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.openwakepc.app;
+				PRODUCT_NAME = OpenWakePC;
+				SDKROOT = iphoneos;
+				SUPPORTS_LIVE_ACTIVITIES = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FF68DD93121F8385E34625AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = WakePCWidgetExtension/Resources/WakePCWidgetExtension.entitlements;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WakePCWidgetExtension/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.openwakepc.app.WakePCWidget;
+				PRODUCT_NAME = WakePCWidgetExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EB245CC4DA66F648E410771 /* Build configuration list for PBXNativeTarget "WakePC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51FB80A81D28D9873E25FF23 /* Debug */,
+				7DC83E762CFE8859FE23ADAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EF2DAB8C3432DC8DA1193B72 /* Build configuration list for PBXProject "WakePC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D9A0098777F90C4914812CE /* Debug */,
+				1B0C94F2C73512EED11B5AB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FD4A74084EADE58BB40E61E6 /* Build configuration list for PBXNativeTarget "WakePCWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF68DD93121F8385E34625AA /* Debug */,
+				5AB827D26814D246D1B29D6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A46B305C4226825F994B621 /* Project object */;
+}

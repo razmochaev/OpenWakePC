@@ -1,0 +1,37 @@
+# macOS & Xcode
+.DS_Store
+**/.DS_Store
+DerivedData/
+**/xcuserdata/
+*.xcuserstate
+build/
+*.dSYM
+*.dSYM/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+.eggs/
+
+# .NET / Windows
+**/bin/
+**/obj/
+
+# Build & Release Artifacts
+dist/
+*.ipa
+*.dmg
+*.exe
+*.zip
+
+# Secrets & Runtime Config
+.env
+.env.*
+*.pem
+*.key
+agent.json
+push_store.json

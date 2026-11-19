@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>OpenWakePCAgent</AssemblyName>
+    <RootNamespace>WakePCAgent</RootNamespace>
+    <Version>1.0.0</Version>
+    <Product>OpenWakePC Agent</Product>
+    <Authors>razmochaev</Authors>
+    <Company>razmochaev</Company>
+    <Copyright>© 2026 razmochaev</Copyright>
+    <Description>OpenWakePC Windows Desktop Agent by razmochaev</Description>
+    <PackageProjectUrl>https://razmochaev.com</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/razmochaev/OpenWakePC</RepositoryUrl>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NAudio.Wasapi" Version="2.2.1" />
+    <PackageReference Include="QRCoder" Version="1.6.0" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.10" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
+  </ItemGroup>
+</Project>

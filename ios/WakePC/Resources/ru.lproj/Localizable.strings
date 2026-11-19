@@ -1,0 +1,267 @@
+"splash_subtitle_free" = "Wake-on-LAN и удалённое управление ПК";
+"status_online" = "В сети";
+"status_offline" = "Не в сети";
+"status_checking" = "Проверка...";
+"status_waking" = "Пробуждение...";
+
+"action_wake" = "Включить";
+"action_shutdown" = "Выключить";
+"action_restart" = "Перезагрузка";
+"action_sleep" = "Сон";
+"action_hibernate" = "Гибернация";
+"action_lock" = "Блокировка";
+"action_display_off" = "Выкл. экран";
+"action_cancel" = "Отмена";
+"action_confirm" = "Подтвердить";
+"action_done" = "Готово";
+"action_save" = "Сохранить";
+"action_close" = "Закрыть";
+"action_skip" = "Пропустить";
+"action_scan_qr" = "Сканировать QR";
+"action_add_manual" = "Ввести вручную";
+"action_find_lan" = "Найти в локальной сети";
+"action_wake_all" = "Включить все ПК";
+"action_open_in_browser" = "Открыть на ПК";
+"action_send_clipboard" = "В буфер ПК";
+"action_get_clipboard" = "Забрать с ПК";
+"action_pick_photos" = "Отправить фото / видео";
+"action_pick_files" = "Отправить файлы";
+
+"control_volume" = "Громкость";
+"volume_muted" = "Без звука";
+"control_mic" = "Микрофон";
+"mic_muted" = "Выключен";
+"mic_mute_btn" = "Выкл. микрофон";
+"mic_unmute_btn" = "Вкл. микрофон";
+"control_brightness" = "Яркость";
+"telemetry_uptime" = "Аптайм";
+"telemetry_cpu_load" = "Нагрузка ЦП";
+
+"section_custom_commands" = "Свои команды";
+"section_computers" = "Компьютеры";
+"section_uploads" = "Загрузки";
+
+"tool_touchpad" = "Тачпад и клавиши";
+"tool_screenshot" = "Экран ПК";
+"tool_send_to_pc" = "Отправить на ПК";
+"tool_running_apps" = "Программы";
+
+"empty_title" = "Добавьте первый компьютер";
+"empty_subtitle" = "Отсканируйте QR-код из десктопного агента OpenWakePC или введите MAC и IP вручную для Wake-on-LAN.";
+
+"onboarding_title" = "Добро пожаловать в OpenWakePC";
+"onboarding_subtitle" = "Включайте и управляйте Windows и Mac в локальной сети или через собственный E2EE-релей.";
+"onboarding_feat_wol" = "Мгновенный Wake-on-LAN, Buddy Wake и геофенсинг";
+"onboarding_feat_e2ee" = "Сквозное шифрование AES-256-GCM через свой релей";
+"onboarding_feat_free" = "Все 21 тема оформления, виджеты и Siri";
+"onboarding_searching_lan" = "Поиск в Wi-Fi...";
+"onboarding_connect_btn" = "Подключить";
+
+"profiles_title" = "Компьютеры";
+"profile_add_title" = "Новый компьютер";
+"profile_edit_title" = "Редактировать ПК";
+"discovery_section" = "Поиск в локальной сети";
+"discovery_scan_lan" = "Найти агенты в Wi-Fi";
+"profile_basic_section" = "Основное";
+"profile_name" = "Название";
+"profile_device_type" = "Система";
+"profile_network_section" = "Сеть";
+"profile_broadcast_optional" = "Broadcast (необязательно)";
+"profile_agent_section" = "Десктопный агент (для WoL необязательно)";
+"profile_token_optional" = "Токен агента";
+"profile_device_id_optional" = "Device ID (для релея)";
+"geofence_section" = "Автоматика по приезду";
+"geofence_toggle" = "Включать, когда я подъезжаю к дому (~150 м)";
+
+"buddy_wake_title" = "Разбудить через другой ПК";
+"buddy_wake_subtitle" = "Отправить WoL внутри домашней сети через %@";
+"agent_problems_banner" = "Обнаружены предупреждения диагностики (%d)";
+"idle_waiting_label" = "Ожидание простоя";
+
+"qr_hint" = "Наведите камеру на QR-код агента";
+"qr_invalid_code" = "Нераспознанный QR-код OpenWakePC";
+
+"touchpad_lan_only_banner" = "Жесты мыши работают только в домашнем Wi-Fi. Клавиатура и хоткеи работают и через релей.";
+"touchpad_g1_title" = "1 палец";
+"touchpad_g1_sub" = "Курсор • тап: клик";
+"touchpad_g2_title" = "2 пальца";
+"touchpad_g2_sub" = "Плавная прокрутка";
+"touchpad_g3_title" = "Тап 2 пальцами";
+"touchpad_g3_sub" = "Правый клик (ПКМ)";
+"touchpad_g4_title" = "2× тап и тянуть";
+"touchpad_g4_sub" = "Перетаскивание";
+"touchpad_left_click" = "Левый клик";
+"touchpad_right_click" = "Правый клик";
+
+"send_text_section" = "Ссылки и буфер обмена";
+"send_text_placeholder" = "Вставьте ссылку или текст для отправки на ПК...";
+"send_files_section" = "Файлы в папку «Загрузки»";
+"send_files_footer" = "Работает только в домашнем Wi-Fi. Максимум 500 МБ на файл.";
+"clipboard_get_truncated" = "Буфер ПК скопирован (текст обрезан по лимиту).";
+
+"screenshot_loading" = "Загрузка снимка экрана ПК...";
+"stream_live_badge" = "LIVE";
+"stream_paused_badge" = "ПАУЗА";
+"apps_force_close_title" = "Завершить принудительно?";
+"apps_force_close_msg" = "Программа %@ не закрылась мягко. Завершить принудительно?";
+"apps_force_close_btn" = "Завершить";
+"audio_outputs_title" = "Вывод звука";
+"audio_inputs_title" = "Выбор микрофона";
+
+"confirm_shutdown_title" = "Выключить компьютер?";
+"confirm_restart_title" = "Перезагрузить компьютер?";
+"confirm_power_body" = "Вы уверены, что хотите выполнить это действие для %@?";
+"biometrics_reason" = "Подтвердите действие питания";
+
+"schedule_title" = "Таймер";
+"schedule_timer_section" = "Обратный отсчёт";
+"unit_hours" = "Часы";
+"unit_minutes" = "Минуты";
+"schedule_start_btn" = "Запустить таймер";
+"idle_section_title" = "Когда компьютер закончит";
+"idle_section_footer" = "Выполнится автоматически, когда CPU и сеть будут простаивать указанное время.";
+"idle_minutes_label" = "Минут простоя";
+"idle_finish_btn" = "Выполнить по простою";
+
+"themes_title" = "Темы";
+"appearance_mode" = "Оформление";
+"appearance_system" = "Системное";
+"appearance_light" = "Светлое";
+"appearance_dark" = "Тёмное";
+"button_icons_only" = "Только значки на кнопках питания";
+
+"settings_title" = "Настройки";
+"settings_relay_section" = "Удалённый доступ (E2EE-релей)";
+"settings_relay_mode_label" = "Режим релея";
+"settings_relay_mode_cloud" = "Облачный E2EE (Авто)";
+"settings_relay_mode_custom" = "Свой сервер";
+"settings_relay_cloud_active" = "Подключение через облачный E2EE-релей активно";
+"settings_relay_cloud_footer" = "Работает сразу вне дома без настройки. Все команды и ответы шифруются сквозным AES-256-GCM — релей видит только шифротекст.";
+"settings_relay_discovery_placeholder" = "Опционально: URL relay.json";
+"settings_save_relay" = "Сохранить адрес релея";
+"settings_relay_footer" = "Укажите адрес вашего self-hosted релея для управления ПК вне дома со сквозным шифрованием AES-256-GCM.";
+"settings_security_section" = "Безопасность";
+"settings_biometrics" = "Face ID для выключения и перезагрузки";
+"settings_notifications_section" = "Уведомления";
+"settings_presence_push" = "Push о включении, выключении и простое";
+"settings_idle_notify" = "Уведомлять о простое через";
+"option_off" = "Выкл.";
+"settings_feedback_section" = "Отклик";
+"settings_haptics" = "Тактильный отклик";
+"settings_sounds" = "Звуки интерфейса";
+"settings_links_section" = "Ссылки";
+"settings_website" = "Сайт — razmochaev.com";
+"settings_github" = "GitHub — Скачать и исходный код";
+
+"help_title" = "Помощь и диагностика";
+"help_diagnostics_section" = "Диагностика подключения";
+"help_run_diagnostics" = "Проверить подключение";
+"help_no_profile_hint" = "Добавьте компьютер через поиск в Wi-Fi или QR-код, чтобы проверить подключение.";
+"help_section_setup" = "Настройка компьютера";
+"help_section_features" = "Управление и возможности";
+"help_section_troubleshooting" = "Решение проблем";
+"help_tip_label" = "Совет";
+"diag_wifi_title" = "Wi-Fi и VPN";
+"diag_wifi_ok" = "Подключено к Wi-Fi";
+"diag_wifi_off" = "Нет Wi-Fi (будет использован релей, если настроен)";
+"conn_hint_vpn_ok" = "Активны Wi-Fi + VPN";
+"diag_subnet_title" = "Локальная подсеть";
+"conn_fail_different_network" = "iPhone и ПК находятся в разных подсетях";
+"diag_agent_title" = "Десктопный агент и токен";
+"diag_agent_ok" = "Агент ответил, токен принят";
+"diag_problems_title" = "Предупреждения агента";
+
+"guide_mac_title" = "Подключение Mac";
+"guide_mac_subtitle" = "Агент в строке меню, Wi-Fi/QR и права доступа";
+"guide_mac_step1" = "Запустите OpenWakePC Agent на Mac — значок появится в верхней строке меню (порт 8765).";
+"guide_mac_step2" = "На iPhone нажмите «Найти агенты в Wi-Fi» или отсканируйте QR-код из окна агента — IP, MAC и токен подтянутся автоматически.";
+"guide_mac_step3" = "В меню агента (вкладка «Общие») проверьте индикатор «Пробуждение по сети (WoL)». Если он красный, нажмите «Исправить» или включите «Выводить из сна при сетевом доступе» в Настройках macOS.";
+"guide_mac_step4" = "Для удалённого просмотра экрана разрешите «Запись экрана», а для яркости и клавиатуры — «Универсальный доступ» в Конфиденциальности macOS.";
+"guide_mac_tip" = "Wake-on-LAN стабильнее всего работает через кабель Ethernet (USB-C адаптер). На ноутбуках Mac пробуждение по Wi-Fi поддерживается при подключённом питании.";
+
+"guide_wol_title" = "Windows и BIOS (Wake-on-LAN)";
+"guide_wol_subtitle" = "Включение выключенного ПК по сети";
+"guide_wol_step1" = "Зайдите в BIOS/UEFI (Del или F2 при старте) и включите «Wake on PCI-E / PME Event Up» или «Resume by LAN».";
+"guide_wol_step2" = "В BIOS переведите параметр «ErP Ready» (Deep S4/S5) в состояние Disabled — иначе питание сетевой карты отключается при выключении ПК.";
+"guide_wol_step3" = "В Windows откройте «Диспетчер устройств» → «Сетевые адаптеры» → свойства карты → «Управление электропитанием» и отметьте пробуждение только по Magic Packet.";
+"guide_wol_step4" = "В «Панель управления» → «Электропитание» → «Действие кнопок питания» отключите «Быстрый запуск» (Fast Startup), если ПК не просыпается из выключенного состояния.";
+"guide_wol_step5" = "Запустите OpenWakePC Agent на Windows — он автоматически проверит брандмауэр, автозапуск и покажет QR-код.";
+"guide_wol_tip" = "Если дома отключали электричество, включите ПК один раз вручную. Чтобы он включался сам после подачи света, поставьте в BIOS параметр «Restore on AC Power Loss» = Power On.";
+
+"guide_relay_title" = "Управление через интернет (E2EE)";
+"guide_relay_subtitle" = "Автоматический облачный релей и свой сервер";
+"guide_relay_step1" = "Дома iPhone общается с компьютером напрямую по Wi-Fi (LAN). Как только вы выходите из дома или переключаетесь на LTE/5G, команды идут через E2EE-релей.";
+"guide_relay_step2" = "Весь трафик шифруется сквозным AES-256-GCM с ключом на базе вашего токена (HKDF-SHA256) — сервер релея видит только зашифрованные пакеты.";
+"guide_relay_step3" = "Ничего настраивать не нужно: облачный релей включён по умолчанию. При желании свой релей (Docker / wakepc-relay) можно указать в Настройках.";
+"guide_relay_tip" = "Не нужен ни VPN, ни проброс портов на роутере. Через релей работают статус, громкость, микрофон, яркость, экран ПК, клавиатура, таймеры и свои команды.";
+
+"guide_buddy_title" = "Включение ПК вне дома (Buddy Wake)";
+"guide_buddy_subtitle" = "Пробуждение выключенного ПК через другое устройство";
+"guide_buddy_step1" = "Magic Packet работает только внутри домашней локальной сети, поэтому выключенный ПК нельзя разбудить из интернета напрямую.";
+"guide_buddy_step2" = "Добавьте в приложение второй компьютер в той же сети (например, домашний Mac или ПК), который остаётся включённым.";
+"guide_buddy_step3" = "Когда основной ПК выключен и вы находитесь вне дома, под кнопкой питания появится баннер «Разбудить через другой ПК» — сигнал пойдёт через включённый агент.";
+"guide_buddy_tip" = "В роли домашнего «будильника» отлично подходит любой всегда включённый Mac mini или домашний сервер с запущенным OpenWakePC Agent.";
+
+"guide_controls_title" = "Звук, экран, тачпад и файлы";
+"guide_controls_subtitle" = "Управление включённым компьютером";
+"guide_controls_step1" = "Карточки громкости и микрофона позволяют регулировать уровень ползунком, отключать звук в один тап и переключать устройства вывода/ввода (колонки, наушники, микрофоны).";
+"guide_controls_step2" = "«Экран ПК» показывает актуальный снимок рабочего стола: телефон можно повернуть горизонтально, приближать щипком (до 5x) или нажать на экран, чтобы скрыть панель.";
+"guide_controls_step3" = "В «Тачпад и клавиши» 1 палец двигает курсор, тап — левый клик, 2 пальца — прокрутка и правый клик. Доступна клавиатура и сочетания клавиш (Alt+Tab, Cmd/Win+Space, Ctrl+C/V).";
+"guide_controls_step4" = "Через «Отправить на ПК» можно открывать ссылки, обмениваться буфером обмена и загружать фото/файлы до 500 МБ прямо в папку «Загрузки» (в домашнем Wi-Fi).";
+"guide_controls_step5" = "Во вкладке «Команды» на Mac добавляются собственные кнопки запуска приложений, сайтов и скриптов — они сразу появляются на главном экране iPhone.";
+"guide_controls_tip" = "Жесты мыши и отправка файлов работают только в домашнем Wi-Fi; клавиатура, громкость, микрофон, команды и экран ПК — также через интернет.";
+
+"guide_siri_title" = "Siri, виджеты, таймеры и геолокация";
+"guide_siri_subtitle" = "Быстрый запуск и автоматизация";
+"guide_siri_step1" = "Скажите Siri: «Включи компьютер в OpenWakePC» или добавьте любое из 10 действий OpenWakePC в приложении «Команды» (включая автоматизацию по расписанию).";
+"guide_siri_step2" = "Добавьте виджет OpenWakePC на рабочий стол или экран блокировки, а также кнопку в Пункт управления (iOS 18).";
+"guide_siri_step3" = "Удерживайте (долгое нажатие) кнопки «Выключить», «Перезагрузка» или «Сон», чтобы поставить таймер обратного отсчёта или режим «Когда компьютер закончит» (по простою CPU и сети).";
+"guide_siri_step4" = "В настройках профиля компьютера включите «Включать, когда я подъезжаю к дому» (~150 м) — iPhone автоматически разбудит ПК по возвращении.";
+"guide_siri_tip" = "Активные таймеры выключения и процесс пробуждения отображаются в Live Activities на экране блокировки и Dynamic Island с кнопкой отмены.";
+
+"guide_faq_title" = "Компьютер не просыпается или не в сети";
+"guide_faq_subtitle" = "Чек-лист быстрой диагностики";
+"guide_faq_step1" = "Запустите «Проверить подключение» вверху этой страницы — оно покажет статус Wi-Fi, совпадение подсетей и ответ агента с активным маршрутом.";
+"guide_faq_step2" = "Убедитесь, что iPhone не подключён к гостевому Wi-Fi с изоляцией клиентов (AP Isolation) или к стороннему VPN, блокирующему локальную подсеть.";
+"guide_faq_step3" = "Если компьютер сменил локальный IP после перезагрузки роутера, просто потяните главный экран вниз (pull-to-refresh) — приложение найдёт новый IP по MAC-адресу автоматически.";
+"guide_faq_step4" = "Если при просмотре экрана на Mac возникает ошибка прав, откройте Системные настройки macOS → Конфиденциальность → «Запись экрана», выключите и заново включите OpenWakePC Agent.";
+"guide_faq_step5" = "На Windows проверьте брандмауэр (сеть должна быть «Частной» / Private) и отключите Modern Standby / Fast Startup, если компьютер не реагирует на Magic Packet.";
+"guide_faq_tip" = "Если пересобирали или обновляли приложение на Mac, macOS иногда сбрасывает галочку в «Запись экрана» — удалите старую запись через «−» и добавьте приложение заново.";
+
+"live_waking_sending" = "Отправка Magic Packet...";
+"live_waking_waiting" = "Ожидание запуска ПК...";
+"live_waking_timeout" = "ПК пока не ответил";
+
+"notif_pc_awake_title" = "ПК проснулся";
+"notif_pc_awake_body" = "%@ в сети и готов к работе.";
+"notif_geofence_title" = "С возвращением домой";
+"notif_geofence_body" = "Отправлен сигнал включения для %@.";
+"notif_idle_failed_title" = "Не удалось выполнить действие";
+
+"toast_profile_added" = "Компьютер сохранён";
+"toast_qr_imported" = "Компьютер добавлен по QR";
+"toast_wol_sent" = "Сигнал включения отправлен на %@";
+"toast_buddy_wake_sent" = "Buddy Wake отправлен через %@";
+"toast_wake_all_sent" = "Сигнал отправлен всем компьютерам";
+"toast_command_sent" = "Команда выполнена";
+"toast_schedule_started" = "Таймер запущен на %d мин";
+"toast_schedule_cancelled" = "Запланированное действие отменено";
+"toast_idle_started" = "Автоматика по простою активна";
+"toast_url_opened" = "Ссылка открыта на ПК";
+"toast_clipboard_sent" = "Отправлено в буфер ПК";
+"toast_clipboard_copied" = "Скопировано из буфера ПК";
+"toast_relay_saved" = "Адрес релея сохранён";
+
+"err_invalid_mac" = "Некорректный MAC-адрес (нужен формат AA:BB:CC:DD:EE:FF)";
+"err_invalid_ip" = "Введите корректный IP-адрес";
+"err_invalid_token" = "Токен должен содержать 8–64 символа (A-Z, 0-9, _, -)";
+"err_invalid_port" = "Некорректный номер порта";
+"err_timeout" = "Превышено время ожидания";
+"err_permission_denied" = "Нет доступа к локальной сети";
+"err_unauthorized" = "Неверный токен агента (401)";
+"err_agent_offline" = "Десктопный агент не в сети";
+"err_lan_only" = "Функция работает только в домашнем Wi-Fi";
+"err_lan_unreachable" = "Компьютер недоступен в локальной сети";
+"err_file_too_large" = "Файл превышает лимит 500 МБ";
+"err_relay_not_configured" = "Адрес релея не задан в Настройках";
+"err_no_profile" = "Не настроен ни один профиль компьютера";

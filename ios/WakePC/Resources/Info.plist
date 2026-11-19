@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleDisplayName</key>
+    <string>OpenWakePC</string>
+    <key>NSHumanReadableCopyright</key>
+    <string>© 2026 razmochaev</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>$(PRODUCT_NAME)</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>$(MARKETING_VERSION)</string>
+    <key>CFBundleVersion</key>
+    <string>$(CURRENT_PROJECT_VERSION)</string>
+    <key>ITSAppUsesNonExemptEncryption</key>
+    <false/>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>NSSupportsLiveActivities</key>
+    <true/>
+    <key>WakePCAppGroupID</key>
+    <string>$(APP_GROUP_ID)</string>
+    <key>WakePCKeychainGroup</key>
+    <string>$(KEYCHAIN_GROUP_ID)</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsLocalNetworking</key>
+        <true/>
+    </dict>
+    <key>NSBonjourServices</key>
+    <array>
+        <string>_wakepc._tcp</string>
+    </array>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>org.openwakepc.app</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>wakepc</string>
+            </array>
+        </dict>
+    </array>
+    <key>NSUserActivityTypes</key>
+    <array>
+        <string>TurnOnPCIntent</string>
+        <string>ShutdownPCIntent</string>
+        <string>RestartPCIntent</string>
+        <string>SleepPCIntent</string>
+    </array>
+    <key>NSLocalNetworkUsageDescription</key>
+    <string>OpenWakePC uses the local network to wake your computer via Wake-on-LAN and communicate with the desktop agent.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>OpenWakePC uses your home coordinates to wake your computer when you arrive home.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>OpenWakePC uses geofencing (~150 m around home) to wake your computer automatically when you arrive home. Coordinates never leave your iPhone.</string>
+    <key>NSCameraUsageDescription</key>
+    <string>OpenWakePC uses the camera to scan pairing QR codes displayed by the desktop agent.</string>
+    <key>NSFaceIDUsageDescription</key>
+    <string>OpenWakePC uses Face ID to optionally confirm destructive power actions such as shutdown or restart.</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>OpenWakePC saves screenshots of your computer screen to your Photo Library when you tap Save.</string>
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <false/>
+    </dict>
+    <key>UILaunchScreen</key>
+    <dict/>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+</dict>
+</plist>

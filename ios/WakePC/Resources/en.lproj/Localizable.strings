@@ -1,0 +1,267 @@
+"splash_subtitle_free" = "Wake-on-LAN & Remote PC Control";
+"status_online" = "Online";
+"status_offline" = "Offline";
+"status_checking" = "Checking...";
+"status_waking" = "Waking...";
+
+"action_wake" = "Wake";
+"action_shutdown" = "Shut Down";
+"action_restart" = "Restart";
+"action_sleep" = "Sleep";
+"action_hibernate" = "Hibernate";
+"action_lock" = "Lock";
+"action_display_off" = "Screen Off";
+"action_cancel" = "Cancel";
+"action_confirm" = "Confirm";
+"action_done" = "Done";
+"action_save" = "Save";
+"action_close" = "Close";
+"action_skip" = "Skip";
+"action_scan_qr" = "Scan QR Code";
+"action_add_manual" = "Add Manually";
+"action_find_lan" = "Find on Local Network";
+"action_wake_all" = "Wake All Computers";
+"action_open_in_browser" = "Open URL on PC";
+"action_send_clipboard" = "Send to Clipboard";
+"action_get_clipboard" = "Copy from PC";
+"action_pick_photos" = "Send Photos / Videos";
+"action_pick_files" = "Send Files";
+
+"control_volume" = "Volume";
+"volume_muted" = "Muted";
+"control_mic" = "Microphone";
+"mic_muted" = "Muted";
+"mic_mute_btn" = "Mute Mic";
+"mic_unmute_btn" = "Unmute Mic";
+"control_brightness" = "Brightness";
+"telemetry_uptime" = "Uptime";
+"telemetry_cpu_load" = "CPU load";
+
+"section_custom_commands" = "Custom Commands";
+"section_computers" = "Computers";
+"section_uploads" = "Uploads";
+
+"tool_touchpad" = "Touchpad & Keys";
+"tool_screenshot" = "PC Screen";
+"tool_send_to_pc" = "Send to PC";
+"tool_running_apps" = "Running Apps";
+
+"empty_title" = "Add Your First Computer";
+"empty_subtitle" = "Scan the QR code shown by the OpenWakePC Agent, or enter MAC and IP manually for Wake-on-LAN.";
+
+"onboarding_title" = "Welcome to OpenWakePC";
+"onboarding_subtitle" = "Wake and control Windows & Mac computers over LAN or your own encrypted E2EE relay.";
+"onboarding_feat_wol" = "Instant Wake-on-LAN, Buddy Wake & Geofencing";
+"onboarding_feat_e2ee" = "End-to-End Encrypted self-hosted relay (AES-256-GCM)";
+"onboarding_feat_free" = "All 21 themes, interactive widgets & Siri";
+"onboarding_searching_lan" = "Scanning Wi-Fi...";
+"onboarding_connect_btn" = "Connect";
+
+"profiles_title" = "Computers";
+"profile_add_title" = "Add Computer";
+"profile_edit_title" = "Edit Computer";
+"discovery_section" = "Local Network Discovery";
+"discovery_scan_lan" = "Scan LAN for Agents";
+"profile_basic_section" = "General";
+"profile_name" = "Name";
+"profile_device_type" = "System";
+"profile_network_section" = "Network";
+"profile_broadcast_optional" = "Broadcast (optional)";
+"profile_agent_section" = "Desktop Agent (optional for WoL only)";
+"profile_token_optional" = "Agent Token";
+"profile_device_id_optional" = "Device ID (for Relay)";
+"geofence_section" = "Arrive Home Automation";
+"geofence_toggle" = "Wake when arriving home (~150 m)";
+
+"buddy_wake_title" = "Wake via Another PC (Buddy Wake)";
+"buddy_wake_subtitle" = "Send Wake-on-LAN inside home LAN through %@";
+"agent_problems_banner" = "%d network diagnostics warning(s) detected";
+"idle_waiting_label" = "Waiting for idle";
+
+"qr_hint" = "Point camera at the agent QR code";
+"qr_invalid_code" = "Unrecognized OpenWakePC QR code";
+
+"touchpad_lan_only_banner" = "Mouse gestures require home Wi-Fi. Keyboard & hotkeys still work over Relay.";
+"touchpad_g1_title" = "1 finger";
+"touchpad_g1_sub" = "Move • tap: click";
+"touchpad_g2_title" = "2 fingers";
+"touchpad_g2_sub" = "Smooth scroll";
+"touchpad_g3_title" = "2-finger tap";
+"touchpad_g3_sub" = "Right click";
+"touchpad_g4_title" = "Double-tap hold";
+"touchpad_g4_sub" = "Drag & drop";
+"touchpad_left_click" = "Left Click";
+"touchpad_right_click" = "Right Click";
+
+"send_text_section" = "Links & Clipboard";
+"send_text_placeholder" = "Paste URL or text to send to PC...";
+"send_files_section" = "Files to Downloads Folder";
+"send_files_footer" = "Works on local Wi-Fi only. Maximum 500 MB per file.";
+"clipboard_get_truncated" = "PC clipboard copied (truncated to size limit).";
+
+"screenshot_loading" = "Capturing PC screen...";
+"stream_live_badge" = "LIVE";
+"stream_paused_badge" = "PAUSED";
+"apps_force_close_title" = "Force Quit?";
+"apps_force_close_msg" = "%@ did not close softly. Force terminate it?";
+"apps_force_close_btn" = "Force Quit";
+"audio_outputs_title" = "Audio Output";
+"audio_inputs_title" = "Microphone Input";
+
+"confirm_shutdown_title" = "Shut Down Computer?";
+"confirm_restart_title" = "Restart Computer?";
+"confirm_power_body" = "Are you sure you want to perform this action on %@?";
+"biometrics_reason" = "Confirm power action";
+
+"schedule_title" = "Schedule";
+"schedule_timer_section" = "Countdown Timer";
+"unit_hours" = "Hours";
+"unit_minutes" = "Minutes";
+"schedule_start_btn" = "Start Timer";
+"idle_section_title" = "When Computer Finishes";
+"idle_section_footer" = "Runs automatically once CPU and network stay idle for the selected duration.";
+"idle_minutes_label" = "Idle minutes";
+"idle_finish_btn" = "Run When Idle";
+
+"themes_title" = "Themes";
+"appearance_mode" = "Appearance";
+"appearance_system" = "System";
+"appearance_light" = "Light";
+"appearance_dark" = "Dark";
+"button_icons_only" = "Icon-only power buttons";
+
+"settings_title" = "Settings";
+"settings_relay_section" = "Remote Access (E2EE Relay)";
+"settings_relay_mode_label" = "Relay Mode";
+"settings_relay_mode_cloud" = "Cloud E2EE (Auto)";
+"settings_relay_mode_custom" = "Custom Server";
+"settings_relay_cloud_active" = "Automatic Cloud E2EE Relay is active";
+"settings_relay_cloud_footer" = "Works outside home Wi-Fi with zero setup. All commands are end-to-end encrypted with AES-256-GCM — the relay never sees your data.";
+"settings_relay_discovery_placeholder" = "Optional relay.json URL";
+"settings_save_relay" = "Save Relay URL";
+"settings_relay_footer" = "Enter your own self-hosted relay URL to control your PC outside home Wi-Fi with AES-256-GCM E2EE.";
+"settings_security_section" = "Security";
+"settings_biometrics" = "Require Face ID for Shutdown / Restart";
+"settings_notifications_section" = "Notifications";
+"settings_presence_push" = "Online / Offline & Idle Push Alerts";
+"settings_idle_notify" = "Idle alert after";
+"option_off" = "Off";
+"settings_feedback_section" = "Feedback";
+"settings_haptics" = "Haptic Feedback";
+"settings_sounds" = "Interface Sounds";
+"settings_links_section" = "Links";
+"settings_website" = "Website — razmochaev.com";
+"settings_github" = "GitHub — Download & Source";
+
+"help_title" = "Help & Diagnostics";
+"help_diagnostics_section" = "Connection Diagnostics";
+"help_run_diagnostics" = "Check Connection";
+"help_no_profile_hint" = "Add a computer via Wi-Fi scan or QR code to run connection diagnostics.";
+"help_section_setup" = "Computer Setup";
+"help_section_features" = "Remote Access & Features";
+"help_section_troubleshooting" = "Troubleshooting";
+"help_tip_label" = "Tip";
+"diag_wifi_title" = "Wi-Fi & VPN";
+"diag_wifi_ok" = "Connected to Wi-Fi";
+"diag_wifi_off" = "Not on Wi-Fi (will use Relay if configured)";
+"conn_hint_vpn_ok" = "Wi-Fi + VPN active";
+"diag_subnet_title" = "Local Subnet";
+"conn_fail_different_network" = "iPhone and PC appear to be on different subnets";
+"diag_agent_title" = "Desktop Agent & Token";
+"diag_agent_ok" = "Agent responded and token accepted";
+"diag_problems_title" = "Agent Warnings";
+
+"guide_mac_title" = "Mac Setup";
+"guide_mac_subtitle" = "Menu bar agent, Wi-Fi/QR pairing & permissions";
+"guide_mac_step1" = "Launch OpenWakePC Agent on your Mac — the icon appears in the top menu bar (listening on port 8765).";
+"guide_mac_step2" = "On iPhone, tap 'Scan LAN for Agents' or scan the QR code shown in the agent popover — IP, MAC, and token fill in automatically.";
+"guide_mac_step3" = "In the agent Settings (General tab), verify that 'Wake-on-LAN' is green. If red, click 'Fix' or enable 'Wake for network access' in macOS System Settings.";
+"guide_mac_step4" = "For remote PC screen viewing, allow 'Screen Recording'; for display brightness and keyboard shortcuts, allow 'Accessibility' in macOS Privacy settings.";
+"guide_mac_tip" = "Wake-on-LAN is most reliable over Ethernet (USB-C adapter). Mac laptops support Wi-Fi wake reliably while connected to power.";
+
+"guide_wol_title" = "Windows & BIOS (Wake-on-LAN)";
+"guide_wol_subtitle" = "Waking a shut-down PC over the network";
+"guide_wol_step1" = "Enter BIOS/UEFI (Del or F2 at boot) and enable 'Wake on PCI-E / PME Event Up' or 'Resume by LAN'.";
+"guide_wol_step2" = "Disable 'ErP Ready' (Deep S4/S5) in BIOS so the network card retains standby power when the PC is turned off.";
+"guide_wol_step3" = "In Windows Device Manager -> Network Adapters -> Properties -> Power Management, enable 'Allow this device to wake the computer' and 'Only allow a magic packet'.";
+"guide_wol_step4" = "In Control Panel -> Power Options -> Choose what the power buttons do, turn off 'Fast Startup' if the PC won't wake from shutdown.";
+"guide_wol_step5" = "Run OpenWakePC Agent for Windows — it checks Firewall, startup registration, and displays a pairing QR code.";
+"guide_wol_tip" = "After a power outage, WoL won't wake the PC until it boots once. Set 'Restore on AC Power Loss' = Power On in BIOS if needed.";
+
+"guide_relay_title" = "Control Over Internet (E2EE)";
+"guide_relay_subtitle" = "Automatic cloud relay and self-hosted VPS";
+"guide_relay_step1" = "At home, iPhone communicates directly over Wi-Fi (LAN). Away from home on cellular or another Wi-Fi, commands automatically switch to the E2EE relay.";
+"guide_relay_step2" = "All traffic uses end-to-end AES-256-GCM encryption derived from your token (HKDF-SHA256) — the relay server never sees commands or responses.";
+"guide_relay_step3" = "Zero setup required: cloud relay works out of the box. You can also enter your own self-hosted relay URL (Docker / wakepc-relay) in Settings.";
+"guide_relay_tip" = "No VPN or router port forwarding needed. Status, volume, microphone, brightness, PC screen, keyboard, timers, and custom commands all work through the relay.";
+
+"guide_buddy_title" = "Wake Outside Home (Buddy Wake)";
+"guide_buddy_subtitle" = "Waking a powered-off PC via another computer";
+"guide_buddy_step1" = "Wake-on-LAN Magic Packets work only inside the home local network, so an offline PC cannot be reached directly from the internet.";
+"guide_buddy_step2" = "Add a second computer in the same home network (such as an always-on Mac or PC running OpenWakePC Agent).";
+"guide_buddy_step3" = "When the main PC is off and you are outside home Wi-Fi, tap the 'Wake via Another PC' banner under the power button to forward the Magic Packet locally.";
+"guide_buddy_tip" = "An always-on Mac mini or home server makes an ideal Buddy Wake helper for the rest of your computers.";
+
+"guide_controls_title" = "Audio, Screen, Touchpad & Files";
+"guide_controls_subtitle" = "Managing your online computer";
+"guide_controls_step1" = "Use the Volume and Microphone cards to adjust levels, mute/unmute with one tap, and switch audio output or microphone input devices.";
+"guide_controls_step2" = "PC Screen opens a zoomable view of your desktop: rotate your iPhone horizontally, pinch to zoom up to 5x, or tap the image to hide controls.";
+"guide_controls_step3" = "In Touchpad & Keys, drag with 1 finger to move, tap to click, scroll/right-click with 2 fingers, type text, or press hotkeys like Alt+Tab and Ctrl+C/V.";
+"guide_controls_step4" = "Send to PC lets you open URLs in the PC browser, sync clipboard both ways, and upload photos or files up to 500 MB directly to Downloads on home Wi-Fi.";
+"guide_controls_step5" = "Add apps, websites, or shell scripts under the Commands tab on Mac to show 1-tap action buttons right on your iPhone home screen.";
+"guide_controls_tip" = "Mouse gestures and file uploads require home Wi-Fi (LAN); keyboard, hotkeys, volume, mic, custom commands, and PC screen also work over the relay.";
+
+"guide_siri_title" = "Siri, Widgets, Timers & Geofence";
+"guide_siri_subtitle" = "Quick triggers and automation";
+"guide_siri_step1" = "Say 'Turn on my computer in OpenWakePC' or add any of the 10 OpenWakePC actions inside Apple Shortcuts for voice or scheduled automations.";
+"guide_siri_step2" = "Add OpenWakePC widgets to your Home Screen, Lock Screen, or iOS 18 Control Center for instant 1-tap access.";
+"guide_siri_step3" = "Long-press Shut Down, Restart, or Sleep to schedule a countdown timer or 'When Computer Finishes' (triggers when CPU and network stay idle).";
+"guide_siri_step4" = "Enable 'Wake when arriving home' (~150 m) inside your computer profile settings to automatically send Magic Packets when you arrive.";
+"guide_siri_tip" = "Active wake progress and shutdown countdowns appear on the Lock Screen and Dynamic Island via Live Activities with a quick Cancel button.";
+
+"guide_faq_title" = "PC Won't Wake or Shows Offline";
+"guide_faq_subtitle" = "Quick troubleshooting checklist";
+"guide_faq_step1" = "Run 'Check Connection' at the top of this page to inspect Wi-Fi status, local subnet match, and live agent reachability.";
+"guide_faq_step2" = "Make sure iPhone isn't on a guest Wi-Fi with client isolation (AP Isolation) or a VPN blocking local LAN access.";
+"guide_faq_step3" = "If your computer changed its local IP after a router reboot, pull down on the main screen to refresh — the app automatically heals the IP by MAC address.";
+"guide_faq_step4" = "If PC Screen fails with a permission error on Mac, open System Settings -> Privacy & Security -> Screen Recording and re-enable OpenWakePC Agent.";
+"guide_faq_step5" = "On Windows, verify the network profile is set to Private in Firewall settings and disable Modern Standby / Fast Startup if Magic Packets are ignored.";
+"guide_faq_tip" = "After rebuilding or updating the Mac agent, macOS may require toggling Screen Recording permission off and back on (using the '-' button and re-adding).";
+
+"live_waking_sending" = "Sending Magic Packet...";
+"live_waking_waiting" = "Waiting for PC to boot...";
+"live_waking_timeout" = "PC did not reply yet";
+
+"notif_pc_awake_title" = "PC is Awake";
+"notif_pc_awake_body" = "%@ is now online and ready.";
+"notif_geofence_title" = "Welcome Home";
+"notif_geofence_body" = "Sent wake signal to %@.";
+"notif_idle_failed_title" = "Idle Action Failed";
+
+"toast_profile_added" = "Computer saved";
+"toast_qr_imported" = "Computer added from QR";
+"toast_wol_sent" = "Wake signal sent to %@";
+"toast_buddy_wake_sent" = "Buddy Wake sent via %@";
+"toast_wake_all_sent" = "Wake signal sent to all computers";
+"toast_command_sent" = "Command sent";
+"toast_schedule_started" = "Scheduled in %d min";
+"toast_schedule_cancelled" = "Scheduled action cancelled";
+"toast_idle_started" = "Idle automation armed";
+"toast_url_opened" = "Opened in PC browser";
+"toast_clipboard_sent" = "Copied to PC clipboard";
+"toast_clipboard_copied" = "Copied from PC clipboard";
+"toast_relay_saved" = "Relay URL saved";
+
+"err_invalid_mac" = "Invalid MAC address (expected AA:BB:CC:DD:EE:FF)";
+"err_invalid_ip" = "Enter a valid IP address";
+"err_invalid_token" = "Token must be 8–64 characters (A-Z, 0-9, _, -)";
+"err_invalid_port" = "Invalid port number";
+"err_timeout" = "Request timed out";
+"err_permission_denied" = "Local network permission denied";
+"err_unauthorized" = "Invalid agent token (401)";
+"err_agent_offline" = "Desktop agent is offline";
+"err_lan_only" = "This feature requires local Wi-Fi";
+"err_lan_unreachable" = "Computer is unreachable on LAN";
+"err_file_too_large" = "File exceeds the 500 MB limit";
+"err_relay_not_configured" = "Relay URL is not configured in Settings";
+"err_no_profile" = "No computer profile configured";

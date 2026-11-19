@@ -1,0 +1,82 @@
+name: WakePC
+options:
+  bundleIdPrefix: org.openwakepc
+  deploymentTarget:
+    iOS: "16.6"
+  xcodeVersion: "16.0"
+  createIntermediateGroups: true
+  defaultConfig: Debug
+
+settings:
+  base:
+    SWIFT_VERSION: "5.10"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    TARGETED_DEVICE_FAMILY: "1,2"
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    APP_GROUP_ID: group.org.openwakepc.shared
+    KEYCHAIN_GROUP_ID: $(AppIdentifierPrefix)org.openwakepc.shared
+
+targets:
+  WakePC:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.6"
+    sources:
+      - path: Shared
+      - path: WakePC
+        excludes:
+          - "Resources/Info.plist"
+          - "Resources/WakePC.entitlements"
+    resources:
+      - path: WakePC/Resources/Assets.xcassets
+      - path: WakePC/Resources/en.lproj
+      - path: WakePC/Resources/ru.lproj
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.openwakepc.app
+        PRODUCT_NAME: "OpenWakePC"
+        INFOPLIST_FILE: WakePC/Resources/Info.plist
+        CODE_SIGN_ENTITLEMENTS: WakePC/Resources/WakePC.entitlements
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: NO
+        SUPPORTS_LIVE_ACTIVITIES: YES
+        SUPPORTS_MACCATALYST: YES
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: YES
+    dependencies:
+      - target: WakePCWidgetExtension
+        embed: true
+
+  WakePCWidgetExtension:
+    type: app-extension
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: Shared
+      - path: WakePCWidgetExtension
+        excludes:
+          - "Resources/Info.plist"
+          - "Resources/WakePCWidgetExtension.entitlements"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.openwakepc.app.WakePCWidget
+        PRODUCT_NAME: WakePCWidgetExtension
+        INFOPLIST_FILE: WakePCWidgetExtension/Resources/Info.plist
+        CODE_SIGN_ENTITLEMENTS: WakePCWidgetExtension/Resources/WakePCWidgetExtension.entitlements
+        GENERATE_INFOPLIST_FILE: NO
+        SKIP_INSTALL: YES
+        SUPPORTS_MACCATALYST: YES
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks"
+
+schemes:
+  WakePC:
+    build:
+      targets:
+        WakePC: all
+        WakePCWidgetExtension: all
+    run:
+      config: Debug
+    archive:
+      config: Release
