@@ -67,6 +67,7 @@ public final class NetworkService: ObservableObject {
         try WoLSender.send(
             mac: profile.mac,
             broadcast: profile.resolvedBroadcast,
+            ip: profile.ip,
             port: profile.wolPort,
             repeatCount: 3
         )

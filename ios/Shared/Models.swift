@@ -294,6 +294,7 @@ public struct ResponseData: Codable, Sendable {
     public let micVolume: Int?
     public let micMuted: Bool?
     public let brightness: Int?
+    public let displayAsleep: Bool?
     public let features: [String]?
     public let agentVersion: String?
     public let ip: String?

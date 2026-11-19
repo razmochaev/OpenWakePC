@@ -7,6 +7,7 @@ import CoreVideo
 import Darwin
 import Foundation
 import IOKit
+import IOKit.pwr_mgt
 import ScreenCaptureKit
 
 struct AudioOutput: Codable, Identifiable {
@@ -90,7 +91,9 @@ final class MacSystemController: @unchecked Sendable {
             runProcess("/usr/bin/osascript", ["-e", #"tell application "System Events" to restart"#])
             return (true, "Restart command sent")
         case "sleep", "hibernate":
-            runProcess("/usr/bin/pmset", ["sleepnow"])
+            DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: .now() + 0.35) {
+                self.runProcess("/usr/bin/pmset", ["sleepnow"])
+            }
             return (true, "Sleep command sent")
         case "lock":
             runProcess("/usr/bin/osascript", ["-e", #"tell application "System Events" to keystroke "q" using {command down, control down}"#])
@@ -98,11 +101,32 @@ final class MacSystemController: @unchecked Sendable {
         case "display-off":
             runProcess("/usr/bin/pmset", ["displaysleepnow"])
             return (true, "Display sleep sent")
-        case "display-on":
-            runProcess("/usr/bin/caffeinate", ["-u", "-t", "2"])
+        case "display-on", "wake":
+            wakeDisplayAndSystem()
             return (true, "Display wake sent")
         default:
             return (false, "Unknown power action")
+        }
+    }
+
+    func isDisplayAsleep() -> Bool {
+        CGDisplayIsAsleep(CGMainDisplayID()) != 0
+    }
+
+    /// Promotes DarkWake to FullWake and turns the display on via IOKit user activity + caffeinate.
+    func wakeDisplayAndSystem() {
+        var aid: IOPMAssertionID = 0
+        let rc = IOPMAssertionDeclareUserActivity("OpenWakePC Wake" as CFString, kIOPMUserActiveLocal, &aid)
+        if rc == kIOReturnSuccess {
+            DispatchQueue.global().asyncAfter(deadline: .now() + 4.0) {
+                IOPMAssertionRelease(aid)
+            }
+        }
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.runProcess("/usr/bin/caffeinate", ["-u", "-t", "5"])
+            self.mouseMove(dx: 1, dy: 0)
+            usleep(50_000)
+            self.mouseMove(dx: -1, dy: 0)
         }
     }
 

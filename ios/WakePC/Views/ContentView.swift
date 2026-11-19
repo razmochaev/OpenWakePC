@@ -19,6 +19,8 @@ struct ContentView: View {
     @State private var profiles: [PCProfile] = []
     @State private var selectedProfileId: String?
     @State private var connectionStatus: ConnectionStatus = .unknown
+    @State private var isDisplayAsleep = false
+    @State private var sleepGraceUntil: Date = .distantPast
     @State private var isWaking = false
     @State private var supportedFeatures: Set<String> = []
     @State private var diagnostics: DiagnosticsInfo?
@@ -101,7 +103,7 @@ struct ContentView: View {
 
                             PowerButton(
                                 theme: theme,
-                                isOnline: connectionStatus == .connected,
+                                isOnline: connectionStatus == .connected && !isDisplayAsleep,
                                 isChecking: connectionStatus == .checking,
                                 isWaking: isWaking
                             ) {
@@ -534,7 +536,9 @@ struct ContentView: View {
             (.sleep, "moon.zzz.fill", L10n.tr("action_sleep"), .sleep),
             (.lock, "lock.fill", L10n.tr("action_lock"), nil),
             (.hibernate, "snowflake", L10n.tr("action_hibernate"), nil),
-            (.displayOff, "display.trianglebadge.exclamationmark", L10n.tr("action_display_off"), nil),
+            isDisplayAsleep
+                ? (.displayOn, "sun.max.fill", L10n.tr("action_display_on"), nil)
+                : (.displayOff, "display.trianglebadge.exclamationmark", L10n.tr("action_display_off"), nil),
         ]
 
         return LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
@@ -827,7 +831,7 @@ struct ContentView: View {
     private func handleMainPowerButton(profile: PCProfile) {
         HapticService.shared.heavy()
         SoundService.shared.playTap()
-        if connectionStatus == .connected {
+        if connectionStatus == .connected && !isDisplayAsleep {
             triggerPowerCommand(.shutdown, on: profile)
         } else {
             Task { await wakeProfile(profile) }
@@ -836,44 +840,88 @@ struct ContentView: View {
 
     private func wakeProfile(_ profile: PCProfile) async {
         isWaking = true
+        sleepGraceUntil = .distantPast
+        network.invalidateRouteCache(for: profile.id)
         LiveActivityManager.shared.startWakeActivity(for: profile)
         defer { isWaking = false }
 
+        var wolError: Error?
         do {
             try await network.wake(profile)
-            SoundService.shared.playSuccess()
-            showToast(L10n.tr("toast_wol_sent", profile.name))
-            LiveActivityManager.shared.updateWakeActivity(
-                for: profile.id,
-                phase: .waking,
-                message: L10n.tr("live_waking_waiting")
-            )
-
-            // Poll for up to 45 seconds until the agent comes online
-            for _ in 0..<15 {
-                try? await Task.sleep(nanoseconds: 3_000_000_000)
-                if let resp = try? await network.fetchStatus(profile: profile), resp.success {
-                    connectionStatus = .connected
-                    LiveActivityManager.shared.updateWakeActivity(
-                        for: profile.id,
-                        phase: .awake,
-                        message: L10n.tr("notif_pc_awake_title")
-                    )
-                    LiveActivityManager.shared.notifyPCAwake(profile)
-                    HapticService.shared.success()
-                    return
-                }
-            }
-            LiveActivityManager.shared.updateWakeActivity(
-                for: profile.id,
-                phase: .timeout,
-                message: L10n.tr("live_waking_timeout")
-            )
         } catch {
+            wolError = error
+        }
+
+        if wolError != nil && !profile.supportsRelay {
             LiveActivityManager.shared.endWakeActivity(for: profile.id)
             HapticService.shared.error()
-            showToast(error.localizedDescription, isError: true)
+            showToast(wolError!.localizedDescription, isError: true)
+            return
         }
+
+        SoundService.shared.playSuccess()
+        showToast(L10n.tr("toast_wol_sent", profile.name))
+        LiveActivityManager.shared.updateWakeActivity(
+            for: profile.id,
+            phase: .waking,
+            message: L10n.tr("live_waking_waiting")
+        )
+
+        let delaysNs: [UInt64] = [
+            400_000_000,
+            1_200_000_000,
+            2_000_000_000,
+        ]
+        for attempt in 0..<14 {
+            let delay = attempt < delaysNs.count ? delaysNs[attempt] : 2_500_000_000
+            try? await Task.sleep(nanoseconds: delay)
+
+            var current = activeProfile ?? profile
+            if attempt == 2 || attempt == 5 {
+                try? await network.wake(current)
+            }
+            if attempt == 3 && network.interfaces.wifi {
+                if let healed = await LANAddressHealer.heal(profile: current) {
+                    current.ip = healed.ip
+                    current.apiPort = healed.port
+                    current.broadcast = healed.broadcast
+                    if let healedMAC = healed.mac, PCQRCode.isValidMAC(healedMAC) {
+                        current.mac = healedMAC.uppercased()
+                    }
+                    if let healedToken = healed.token, !healedToken.isEmpty {
+                        current.token = healedToken
+                    }
+                    upsertProfile(current)
+                    network.invalidateRouteCache(for: current.id)
+                }
+            }
+
+            let resp: ApiResponse? = if current.hasAgentCredentials {
+                try? await network.executePower(.displayOn, on: current)
+            } else {
+                try? await network.fetchStatus(profile: current)
+            }
+
+            if let resp, resp.success {
+                isDisplayAsleep = false
+                connectionStatus = .connected
+                await pollStatus(for: current, healIfNeeded: false)
+                LiveActivityManager.shared.updateWakeActivity(
+                    for: current.id,
+                    phase: .awake,
+                    message: L10n.tr("notif_pc_awake_title")
+                )
+                LiveActivityManager.shared.notifyPCAwake(current)
+                HapticService.shared.success()
+                return
+            }
+        }
+
+        LiveActivityManager.shared.updateWakeActivity(
+            for: profile.id,
+            phase: .timeout,
+            message: L10n.tr("live_waking_timeout")
+        )
     }
 
     private func wakeAllProfiles() {
@@ -904,8 +952,23 @@ struct ContentView: View {
             _ = try await network.executePower(cmd, on: profile)
             HapticService.shared.success()
             showToast(L10n.tr("toast_command_sent"))
-            if cmd == .shutdown || cmd == .sleep || cmd == .hibernate {
+            switch cmd {
+            case .sleep, .hibernate:
                 connectionStatus = .failed
+                isDisplayAsleep = true
+                sleepGraceUntil = Date().addingTimeInterval(10.0)
+                SharedStorage.shared.setOnline(false, forProfileId: profile.id)
+            case .shutdown:
+                connectionStatus = .failed
+                isDisplayAsleep = false
+                SharedStorage.shared.setOnline(false, forProfileId: profile.id)
+            case .displayOff:
+                isDisplayAsleep = true
+            case .displayOn:
+                isDisplayAsleep = false
+                sleepGraceUntil = .distantPast
+            default:
+                break
             }
         } catch {
             HapticService.shared.error()
@@ -957,7 +1020,7 @@ struct ContentView: View {
             let intervalNs: UInt64 = (network.lastUsedRoute == .relay) ? 5_000_000_000 : 2_000_000_000
             try? await Task.sleep(nanoseconds: intervalNs)
             guard let current = activeProfile else { break }
-            if showScreenshot {
+            if showScreenshot || Date() < sleepGraceUntil {
                 continue
             }
             tickCount += 1
@@ -1034,6 +1097,7 @@ struct ContentView: View {
             }
 
             connectionStatus = resp.success ? .connected : .failed
+            isDisplayAsleep = resp.data?.displayAsleep ?? false
             supportedFeatures = resp.resolvedFeatures
             diagnostics = resp.diagnostics
             applyVolumeFrom(resp.data)

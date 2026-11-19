@@ -11,6 +11,7 @@
 "action_hibernate" = "Гибернация";
 "action_lock" = "Блокировка";
 "action_display_off" = "Выкл. экран";
+"action_display_on" = "Вкл. экран";
 "action_cancel" = "Отмена";
 "action_confirm" = "Подтвердить";
 "action_done" = "Готово";

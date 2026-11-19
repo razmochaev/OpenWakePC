@@ -11,6 +11,7 @@
 "action_hibernate" = "Hibernate";
 "action_lock" = "Lock";
 "action_display_off" = "Screen Off";
+"action_display_on" = "Screen On";
 "action_cancel" = "Cancel";
 "action_confirm" = "Confirm";
 "action_done" = "Done";

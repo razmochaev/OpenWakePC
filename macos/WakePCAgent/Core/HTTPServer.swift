@@ -167,6 +167,7 @@ final class HTTPServer: ObservableObject {
                     "micVolume": mic.volume,
                     "micMuted": mic.muted,
                     "brightness": sys.getBrightness(),
+                    "displayAsleep": sys.isDisplayAsleep(),
                 ],
             ]
             return (200, jsonBytes(payload))
@@ -242,6 +243,7 @@ final class HTTPServer: ObservableObject {
             data["micVolume"] = mic.volume
             data["micMuted"] = mic.muted
             data["brightness"] = sys.getBrightness()
+            data["displayAsleep"] = sys.isDisplayAsleep()
             let diag: [String: Any] = [
                 "wifiConnected": true,
                 "primaryAdapter": AgentConfig.detectPrimaryIPv4().interface,
@@ -258,7 +260,7 @@ final class HTTPServer: ObservableObject {
         case "/telemetry":
             return okJSON(data: sys.telemetry())
 
-        case "/shutdown", "/restart", "/sleep", "/hibernate", "/lock", "/display-off", "/display-on":
+        case "/shutdown", "/restart", "/sleep", "/hibernate", "/lock", "/display-off", "/display-on", "/wake":
             let (ok, msg) = sys.executePower(String(path.dropFirst()))
             return ok ? okJSON(message: msg) : errJSON(msg)
 
